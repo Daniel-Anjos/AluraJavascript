@@ -1,5 +1,5 @@
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
-botaoAdicionar.addEventListener("click", function () {
+botaoAdicionar.addEventListener("click", function (event) {
     event.preventDefault();
     var form = document.querySelector("#form-adiciona");
     var nome = form.nome.value;
@@ -13,6 +13,7 @@ botaoAdicionar.addEventListener("click", function () {
     var pesoTd = document.createElement("td");
     var alturaTd = document.createElement("td");
     var gorduraTd = document.createElement("td");
+    var imcTd = document.createElement("td");
 
     nomeTd.textContent = nome;
     pesoTd.textContent = peso;
@@ -30,4 +31,4 @@ botaoAdicionar.addEventListener("click", function () {
     tabela.appendChild(pacienteTr);
 })
 
-
+  
